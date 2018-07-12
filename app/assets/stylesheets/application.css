@@ -14,7 +14,9 @@
  *= require_self
  */
 
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css";
 @import url('https://fonts.googleapis.com/css?family=Gaegu:400,700');
+
 
 body {
     font-family: 'Gaegu', cursive;
@@ -45,6 +47,7 @@ a {
   margin-right: auto;
   margin-left: auto;
 }
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
