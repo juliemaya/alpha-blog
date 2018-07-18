@@ -8,11 +8,7 @@
 </head>
 <body>
   <div class="container">
-    <% flash.each do |name, msg|  %>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item list-group-item-success"><%= msg %></li>
-      </ul>
-    <% end %>
+    <%= render 'layouts/messages' %>
   </div> 
   
 <%= yield %>
