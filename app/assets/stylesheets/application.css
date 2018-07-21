@@ -55,6 +55,10 @@ a {
   margin-left: auto;
 }
 
+.padding {
+  padding-top: 20px;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 750px;

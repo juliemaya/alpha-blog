@@ -1,15 +1,9 @@
 <div class="container">
+    
+    <%= render 'shared/errors', obj: @article %>
+    
     <div class="row">
-        <div class="col-6 mx-auto text-left">
-            <% if @article.errors.any? %>
-            <h5>The following errors prevented the article from getting created:</h5>
-            <ul class="list-group list-group-flush pb-5">
-                <% @article.errors.full_messages.each do |msg| %>
-                    <li class="list-group-item list-group-item-danger"><%= msg %></li>
-                <% end %>
-            </ul>
-            <% end %>
-            
+        <div class="col-xs-8 col-xs-offset-2 text-left">
             <%= form_for @article do |f| %>
             <div class="form-group">
                 <%= f.label :title %>
