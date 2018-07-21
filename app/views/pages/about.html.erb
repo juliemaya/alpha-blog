@@ -1,8 +1,11 @@
-<h1>About Page</h1>
+<h1 class="text-center">About this blog</h1>
 
-<p>These are animals from Australia</p>
+<div id="about"></div>
+<div class="container">
+    <p class="lead">This is an exercise project for me to practice Ruby on Rails</p>
+    <small>Updated: 21 Jul 2018</small>
+</div>
 
-<%= link_to image_tag('bunny.jpg', :class=> 'bunny_img'), 'https://www.google.com' %>
+<%#= link_to image_tag('bunny.jpg', :class=> 'bunny_img'), 'https://www.google.com' %>
 
-<br>
-<%= link_to 'Home', root_path %>
+<%= render 'layouts/footer' %>

@@ -13,32 +13,39 @@
  *= require_tree .
  *= require_self
  */
-
-@import "https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css";
+@import url('https://use.fontawesome.com/releases/v5.1.1/css/all.css');
 @import url('https://fonts.googleapis.com/css?family=Gaegu:400,700');
 
 
 body {
-    font-family: 'Gaegu', cursive;
-    text-align: center;
+  font-family: 'Gaegu', cursive;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #header {
-    background-image: url('https://source.unsplash.com/1BhDhPBbHLA');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 600px;
-    width:100%;
+  background-image: url('https://source.unsplash.com/1BhDhPBbHLA');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 600px;
+  width:100%;
+}
+
+#about {
+  background-image: url('https://source.unsplash.com/fnAN6OFXR9A');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 600px;
+  width:100%;
 }
 
 .bunny_img {
-    max-height: 200px;
-    height: auto;
+  max-height: 200px;
+  height: auto;
 }
 
 .container {
