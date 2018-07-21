@@ -55,8 +55,8 @@ a {
   margin-left: auto;
 }
 
-.padding {
-  padding-top: 20px;
+.padding-bottom {
+  padding-bottom: 15px;
 }
 
 @media (min-width: 768px) {

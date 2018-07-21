@@ -5,20 +5,21 @@
     <div class="row">
         <div class="col-xs-8 col-xs-offset-2 text-left">
             <%= form_for @article do |f| %>
-            <div class="form-group">
-                <%= f.label :title %>
-                <%= f.text_field :title, :class=> 'form-control' %>
-            </div>
-            <div class="form-group">
-                <%= f.label :description %>
-                <%= f.text_area :description, size:"30x15", :class=> 'form-control' %>
-            </div>
-            <div class="form-group">
-                <%= f.submit class: "btn btn-primary" %>
-                <% end %>
-            </div>
+                <div class="form-group">
+                    <%= f.label :title %>
+                    <%= f.text_field :title, :class=> 'form-control' %>
+                </div>
+                <div class="form-group">
+                    <%= f.label :description %>
+                    <%= f.text_area :description, size:"30x15", :class=> 'form-control' %>
+                </div>
+                <div class="form-group">
+                    <%= f.submit class: "btn btn-primary" %>
+                </div>
+            <% end %>
             <div class="col-xs-5 col-xs-offset-5">
-                <%= link_to "Back to Listing", articles_path %>
+                <%= link_to "Back to Article", article_path(@article) %> |
+                <%= link_to "View All", articles_path %> 
             </div>    
             
         </div>
