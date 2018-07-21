@@ -14,10 +14,15 @@
  *= require_self
  */
 @import url('https://use.fontawesome.com/releases/v5.1.1/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,500,700,800,900');
 @import url('https://fonts.googleapis.com/css?family=Gaegu:400,700');
 
 
 body {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+#logo, h1 {
   font-family: 'Gaegu', cursive;
 }
 
