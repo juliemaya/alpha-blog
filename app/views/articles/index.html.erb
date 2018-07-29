@@ -2,30 +2,7 @@
     
     <h1 class="m-5" align="center">All Articles</h1>
     
-    <% @articles.each do |article| %>
-    <div class="row padding">
-        <div class="col-xs-8 col-xs-offset-2">
-            <div class="article-title">
-               <%= link_to article.title, article_path(article) %>
-            </div>
-            <div class="article-body">
-                <%= link_to "Edit", edit_article_path(article), class: "btn btn-xs btn-default text-right" %>
-                <%= link_to "Delete", article_path(article), method: :delete, 
-                                                    data: { confirm: "Are you sure?" }, 
-                                                    class: "btn btn-xs btn-default text-right" %>
-                <br>
-                <div class="padding-bottom"></div>
-                <%= truncate(article.description, length:200) { link_to "more", article_path(article) } %>
-                <br><br>
-                <small>Created by: <%= article.user.username if article.user %> 
-                                   <%= time_ago_in_words(article.created_at)%> ago, 
-                        last updated: <%= time_ago_in_words(article.updated_at) %> ago</small>
-                <div class="padding-bottom"></div>
-            </div>
-            
-        </div>        
-    </div>
-    <% end %>
+    <%= render 'article' , obj: @articles %>
 </div>
 
 <%= render 'layouts/footer' %>
