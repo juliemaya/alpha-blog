@@ -1,0 +1,27 @@
+<div class="container">
+    
+    <h1 align="center" class="padding-bottom">Log In</h1>
+    
+    <%= form_for :session, :html => { class: "form-horizontal", role: "form" }, url: login_path  do |f| %>
+        <div class="form-group">
+            <%= f.label :email, :class=> 'control-label col-sm-4' %>
+            <div class="col-sm-4">
+                <%= f.text_field :email, :class=> 'form-control', :placeholder=> 'Enter your email', :autofocus=> 'true' %>
+            </div>
+        </div>
+        <div class="form-group padding-bottom">
+            <%= f.label :password, :class=> 'control-label col-sm-4' %>
+            <div class="col-sm-4">
+                <%= f.text_field :password, :class=> 'form-control', :autocomplete=> 'off' %>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-4">
+                <%= f.submit "Log In", class: "btn btn-primary" %>
+                <%= link_to "Back", root_path, class: "btn btn-warning" %> 
+            </div>
+        </div>
+    
+    <% end %>
+    
+</div>
