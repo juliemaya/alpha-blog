@@ -5,7 +5,7 @@
            <%= link_to article.title, article_path(article) %>
         </div>
         <div class="article-body">
-            <% if logged_in? && current_user == article.user %>
+            <% if logged_in? && (current_user == article.user || current_user.admin? ) %>
                 <%= link_to "Edit", edit_article_path(article), class: "btn btn-xs btn-default text-right" %>
                 <%= link_to "Delete", article_path(article), method: :delete, 
                                                 data: { confirm: "Are you sure?" }, 
@@ -15,7 +15,7 @@
             <div class="padding-bottom"></div>
             <%= truncate(article.description, length:200) { link_to "more", article_path(article) } %>
             <br><br>
-            <small>Created by: <%= article.user.username if article.user %> 
+            <small>Created by: <%= article.user.username if article.user %>, 
                                <%= time_ago_in_words(article.created_at)%> ago, 
                     last updated: <%= time_ago_in_words(article.updated_at) %> ago</small>
             <div class="padding-bottom"></div>

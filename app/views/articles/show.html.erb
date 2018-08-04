@@ -4,13 +4,13 @@
         <div class="col-xs-8 col-xs-offset-2">  
             <%= simple_format(@article.description) %>
             <div class="article-actions padding-bottom">
-                <% if logged_in? && current_user == @article.user %>
-                    <%= link_to "Edit", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
+                <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
+                    <%= link_to "Edit", edit_article_path(@article), class: "btn btn-xs btn-default" %>
                     <%= link_to "Delete", article_path(@article), method: :delete, 
                                                     data: { confirm: "Are you sure?" }, 
-                                                    class: "btn btn-xs btn-danger" %>
+                                                    class: "btn btn-xs btn-default" %>
                 <% end %>
-                <%= link_to "View All", articles_path, class: "btn btn-xs btn-success" %>
+                <%= link_to "View All", articles_path, class: "btn btn-xs btn-default" %>
                 
             </div>
         </div>
