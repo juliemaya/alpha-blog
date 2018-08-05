@@ -8,7 +8,6 @@ gem 'rails', '4.2.8'
 gem 'sass-rails', '~> 5.0'
 # Use Bootstrap
 gem 'bootstrap-sass', '~> 3.3.7'
-gem 'jquery-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -54,7 +53,7 @@ end
 
 group :production do
   # Postgres DB
-  gem 'pg'
+  gem 'pg', '~> 0.18.4'
   # for Rails 4 or earlier
   gem 'rails_12factor'
 end
