@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Bootstrap
@@ -39,6 +38,8 @@ gem 'bootstrap-will_paginate', '0.0.10'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
@@ -51,3 +52,9 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  # Postgres DB
+  gem 'pg'
+  # for Rails 4 or earlier
+  gem 'rails_12factor'
+end
