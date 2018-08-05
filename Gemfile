@@ -53,7 +53,7 @@ end
 
 group :production do
   # Postgres DB
-  gem 'pg', '~> 0.18.4'
+  gem 'pg'
   # for Rails 4 or earlier
   gem 'rails_12factor'
 end
